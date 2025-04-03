@@ -28,11 +28,13 @@ app.post('/chat', async (req, res) => {
         const result = await response.json();
         res.json(result);
     } catch (error) {
+        console.error("Lỗi khi kết nối API:", error);
         res.status(500).json({ error: "Lỗi khi kết nối API!" });
     }
 });
 
-app.listen(3000, () => console.log("Server đang chạy tại http://localhost:3000"));
 app.get('/', (req, res) => {
     res.send('Server đang chạy');
 });
+
+app.listen(3000, () => console.log("Server đang chạy tại http://localhost:3000"));

@@ -49,16 +49,26 @@ body {
     font-size: 15px;
 }
 
+/* Tin nhắn của người dùng */
 .message.user {
     background-color: #DCF8C6;
     align-self: flex-end;
     border-bottom-right-radius: 0;
 }
 
+/* Tin nhắn của AI */
 .message.ai {
     background-color: #F1F0F0;
     align-self: flex-start;
     border-bottom-left-radius: 0;
+}
+
+/* Style riêng cho thông báo lỗi */
+.message.error {
+    background-color: #ffe6e6;
+    color: #ff0000;
+    border: 1px solid #ffcccc;
+    align-self: center;
 }
 
 @keyframes fadeIn {
